@@ -1,0 +1,30 @@
+<theme>
+  <formatVersion>4</formatVersion>
+
+  <view name="system">
+    <text name="systemName">
+      <color>FFFFFF</color>
+      <fontSize>0.08</fontSize>
+      <alignment>center</alignment>
+      <pos>0.5 0.1</pos>
+    </text>
+  </view>
+
+  <view name="gamelist">
+    <textlist name="gamelist">
+      <selectorColor>AAAAAA</selectorColor>
+      <selectedColor>FFFFFF</selectedColor>
+      <primaryColor>DDDDDD</primaryColor>
+      <fontSize>0.035</fontSize>
+      <horizontalMargin>0.03</horizontalMargin>
+    </textlist>
+
+    <text name="md_description">
+      <color>CCCCCC</color>
+      <fontSize>0.03</fontSize>
+      <pos>0.03 0.70</pos>
+      <size>0.94 0.25</size>
+    </text>
+  </view>
+
+</theme>

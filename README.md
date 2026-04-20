@@ -1,8 +1,6 @@
-===========================================
- RETRO ANTIX - DOCUMENTACIÓN DEL SISTEMA
-===========================================
+# Retro antiX
 
-Este entorno convierte antiX en una plataforma retro liviana,
+Este entorno intenta convertir antiX (https://antixlinux.com/) en una plataforma retro liviana,
 optimizada para hardware Intel Atom N450 + GMA 3150.
 
 Incluye:
@@ -12,30 +10,25 @@ Incluye:
 - Scripts de optimización y mantenimiento
 - Estructura estilo Batocera
 
--------------------------------------------
-INSTALACION Y CONFIGURACION
--------------------------------------------
+## Instalación y configuración
+
 
 Ejecutar:
+
     ./00-script-retro-antix.sh
 
--------------------------------------------
- OPTIMIZAR ANTIX
--------------------------------------------
+##  Optimizar antiX
 
 Ejecutar:
 
     ./01-optimizar-antix.sh
 
-Esto:
 - Desactiva servicios innecesarios
 - Optimiza IceWM
 - Reduce swappiness
 - Limpia temporales
 
--------------------------------------------
- CONFIGURAR RETROARCH AUTOMÁTICAMENTE
--------------------------------------------
+## Configurar RetroArch
 
 Ejecutar:
 
@@ -43,23 +36,18 @@ Ejecutar:
 
 Genera un retroarch.cfg optimizado para Atom N450.
 
--------------------------------------------
- OPTIMIZAR VIDEO PARA GMA 3150
--------------------------------------------
+## Optimizar GMA 3150 (video)
 
 Ejecutar:
 
     ./03-optimizar-gma3150.sh
 
-Esto:
 - Instala drivers Intel
 - Fuerza AccelMethod=uxa
 - Activa TearFree
 - Desactiva compositor
 
--------------------------------------------
- ACTUALIZAR CORES DE RETROARCH
--------------------------------------------
+## Actualizar cores de RetroArch
 
 Ubicado en la carpeta extras.
 Ejecutar:
@@ -74,45 +62,17 @@ Esto descarga los cores livianos recomendados:
 - pcsx_rearmed
 - mame2003_plus
 
-
--------------------------------------------
- FRONTEND (ES-DE)
--------------------------------------------
+## Frontend (ES-DE)
 
 Configuracion
-
-    - Guardar config/ES-DE/es_system.xml en ~/.config/ES-DE/es_systems.xml 
-    - Reemplazar USER por el usuario real
+- Guardar config/ES-DE/es_system.xml en ~/.config/ES-DE/es_systems.xml 
+- Reemplazar USER por el usuario real
 
 ES-DE se ejecuta desde
 
     ~/Retro/emulators/ES-DE.AppImage
 
--------------------------------------------
- ESTRUCTURA DE CARPETAS
--------------------------------------------
-
-~/Retro/
-    roms/
-        nes/
-        snes/
-        gba/
-        megadrive/
-        psx/
-        n64/
-        mame/
-        amiga/
-        dos/
-    bios/
-    saves/
-    states/
-    emulators/
-    README.txt
-
--------------------------------------------
- AGREGAR ROMS
--------------------------------------------
-
+## Agregar Roms
 Colocar ROMs en:
 
     ~/Retro/roms/<sistema>/
@@ -122,9 +82,8 @@ Ejemplos:
 - PSX → ~/Retro/roms/psx/
 - MAME → ~/Retro/roms/mame/
 
--------------------------------------------
-Scripts en carpeta ISO
--------------------------------------------
+## Extras
+###  Generar una ISO, o un USB portable persistente
 
 Estos scripts se corren luego de tener antiX configurado.
 
@@ -141,15 +100,15 @@ Estos scripts se corren luego de tener antiX configurado.
 - Crear una ISO portable persistente
     - Se puede usar sin instalar
     - Funciona desde USB
-        
+	
         Ejecutar:
             ./crear-iso-portable-persistente.sh
         Y para instalarlo en un USB
             ./crear-usb-retro-persistente.sh
 
--------------------------------------------
- NOTAS
--------------------------------------------
+
+## Notas
+
 
 - ES-DE usa es_systems.xml para saber qué emulador usar
     - Script para generarlo automaticamente (si hiciera falta): extras/generar-es-systems.sh 
